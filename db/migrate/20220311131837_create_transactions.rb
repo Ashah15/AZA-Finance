@@ -1,6 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration[6.1]
   def change
-    create_table :transactions do |t|
+    enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
+    create_table :transactions, id: :uuid, default: -> { 'public.gen_random_uuid()' } do |t|
       t.string :customer
       t.integer :output_amount
       t.integer :input_amount
