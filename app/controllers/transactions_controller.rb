@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
-  before_action :logged_in_user
+  before_action :transaction_params, only: :create
+  before_action :find_transaction, only: :show
 
 	def create
       @transaction = Transaction.new(transactions_params)
