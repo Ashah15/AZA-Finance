@@ -33,5 +33,4 @@ RSpec.describe Transaction, type: :model do
 
       it_behaves_like 'an amount'
     end
-  end
 end
