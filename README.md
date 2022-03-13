@@ -12,11 +12,11 @@
 
 How to install and run it locally
 
-- Run git clone  to get it in your local machine.
+- Run git clone https://github.com/Ashah15/AZA-Finance.git to get it in your local machine.
 
 - Navigate to the folder by running
 
-  cd aza-finance
+  cd AZA-Finance
   
 - Install all of the dependencies by running
   
@@ -45,7 +45,3 @@ How to install and run it locally
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## 📝 License
-
-This project is [MIT](https://opensource.org/licenses/MIT) licensed.
