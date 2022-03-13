@@ -1,5 +1,5 @@
 # About
-
+A FX microservice that allows creating and listing of transactions.
 
 ## Tools Used
 
