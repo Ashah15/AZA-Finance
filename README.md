@@ -1,24 +1,51 @@
-# README
+# About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Tools Used
 
-* Ruby version
+- Ruby (2.7.2)
+- Rubocop
+- Rails API
+- Rspec
 
-* System dependencies
+## Getting Started
 
-* Configuration
+How to install and run it locally
 
-* Database creation
+- Run git clone  to get it in your local machine.
 
-* Database initialization
+- Navigate to the folder by running
 
-* How to run the test suite
+  cd aza-finance
+  
+- Install all of the dependencies by running
+  
+  bundle install
+  
+- Bundle the files and start the development server
 
-* Services (job queues, cache servers, search engines, etc.)
+  run rails server
+  
+- How to test the app
 
-* Deployment instructions
+  run rspec
+  
+- The app is now running on the browser
 
-* ...
+ http://localhost:3000/
+
+## Author
+
+👤 **Asha Abdullahi**
+
+-  [Github](https://github.com/Ashah15)
+-  [Twitter](https://twitter.com/AshaAbdullahi13)
+-  [Linkedin](https://www.linkedin.com/in/ashaabdullahi/)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
