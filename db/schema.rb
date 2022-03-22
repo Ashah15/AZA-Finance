@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_03_11_131837) do
   enable_extension "plpgsql"
 
   create_table "transactions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "customer"
+    t.string "customer_id"
     t.integer "output_amount"
     t.integer "input_amount"
     t.string "input_currency"

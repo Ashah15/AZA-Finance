@@ -5,8 +5,4 @@ class Transaction < ApplicationRecord
 
 
   validates :input_amount, :output_amount, format: { with: /\A\d+\z/, message: "Integer only." }
-
-  validates :customer, format: { with: FX::Regex::Transaction.customer_regex,
-                                 message: 'only allows 4 alphanumerics' }
-
 end

@@ -1,6 +1,5 @@
 class TransactionsController < ApplicationController
-  before_action :transaction_params, only: :create
-  before_action :find_transaction, only: :show
+  before_action :transactions_params, only: :create
 
 	def create
       @transaction = Transaction.new(transactions_params)
@@ -12,17 +11,23 @@ class TransactionsController < ApplicationController
 	end
 
 	def index
-	  @transaction = Transaction.all		
+	  @transactions = Transaction.all		
+	  render json: @transactions.to_json
 	end
 
 	def show
-    @transaction = Transaction.find(params[:id])
+    @transaction = Transaction.find_by(id: params[:id])
+    if @transaction.present?
+      render json: @transaction.to_json
+    else
+      render plain: "Transaction Not Found", status: 404
+    end
 	end
 
 	private
 
 	def transactions_params
-	  params.require(:transaction).permit(:input_amount, :output_amount, :output_currency, :input_currency, :customer)	
+	  params.require(:transaction).permit(:input_amount, :output_amount, :output_currency, :input_currency, :customer_id)	
 	end
 
 	def transaction_owner

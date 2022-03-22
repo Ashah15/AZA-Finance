@@ -1,36 +1,49 @@
 require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
-  subject(:transaction) { build(:transaction) }
+  subject{ described_class.new(customer_id: "1",
+                               input_amount: 3,
+                               output_amount: 4,
+                               input_currency: 5,
+                               output_currency: 6)
+  }  
 
-    context 'with customer' do
-      let(:error_message) { 'only allows 4 alphanumerics' }
-      let(:attribute) { :customer }
-
-      it_behaves_like 'a customer'
+    it 'checks that a transaction can be created' do
+      expect(subject).to be_valid
     end
 
-    context 'with input_currency' do
-      let(:attribute) { :input_currency }
-
-      it_behaves_like 'a currency code'
+    it 'shows that a transaction has been created' do
+      expect(subject).to be_valid
     end
 
-    context 'with output_currency' do
-      let(:attribute) { :output_currency }
-
-      it_behaves_like 'a currency code'
+    it "is valid with input_amount" do
+      expect(subject).to be_valid
     end
 
-    context 'with input_amount' do
-      let(:attribute) { :input_amount }
-
-      it_behaves_like 'an amount'
+    it "is valid with output_amount" do
+      expect(subject).to be_valid
     end
 
-    context 'with output_amount' do
-      let(:attribute) { :output_amount }
+    it "is not valid without a customer_id" do
+    subject.customer_id = nil
+    expect(subject).to_not be_valid
+    end
 
-      it_behaves_like 'an amount'
+    it "is not valid without an input_amount" do
+    subject.input_amount = nil
+    expect(subject).to_not be_valid
+    end
+
+    it "is not valid without an output_amount" do
+    subject.output_amount = nil
+    expect(subject).to_not be_valid
+    end
+
+    it "is valid with input_currency" do
+    expect(subject).to be_valid
+    end
+
+    it "is valid with output_currency" do
+    expect(subject).to be_valid
     end
 end
