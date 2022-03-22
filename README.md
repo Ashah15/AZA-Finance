@@ -1,24 +1,47 @@
-# README
+# About
+A FX microservice that allows creating and listing of transactions.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tools Used
 
-Things you may want to cover:
+- Ruby (2.7.2)
+- Rubocop
+- Rails API
+- Rspec
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+How to install and run it locally
 
-* Configuration
+- Run git clone https://github.com/Ashah15/AZA-Finance.git to get it in your local machine.
 
-* Database creation
+- Navigate to the folder by running
 
-* Database initialization
+  cd AZA-Finance
+  
+- Install all of the dependencies by running
+  
+  bundle install
+  
+- Bundle the files and start the development server
 
-* How to run the test suite
+  run rails server
+  
+- How to test the app
 
-* Services (job queues, cache servers, search engines, etc.)
+  run rspec
+  
+- The app is now running on the browser
 
-* Deployment instructions
+ http://localhost:3000/
 
-* ...
+## Author
+
+👤 **Asha Abdullahi**
+
+-  [Github](https://github.com/Ashah15)
+-  [Twitter](https://twitter.com/AshaAbdullahi13)
+-  [Linkedin](https://www.linkedin.com/in/ashaabdullahi/)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
